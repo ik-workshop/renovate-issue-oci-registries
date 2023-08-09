@@ -36,6 +36,13 @@
 ### Renovate similar Issues
 
 - [Issue-19241](https://github.com/renovatebot/renovate/issues/19241)
+- [Issue-16912](https://github.com/renovatebot/renovate/issues/16912)
+- [Issue-11000](https://github.com/helm/helm/issues/11000)
+
+### Supporting Docs
+
+- [Renovate manager](https://docs.renovatebot.com/modules/manager/)
+- [Renovate home sources](https://github.com/renovatebot/renovate/blob/main/lib/modules/manager/helmv3/artifacts.ts#L36)
 
 ### Helm Commands
 
