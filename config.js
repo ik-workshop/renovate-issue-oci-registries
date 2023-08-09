@@ -1,3 +1,5 @@
+const Fs = require('fs');
+
 module.exports = {
   "platform": "github",
   "token": process.env.RENOVATE_TOKEN,

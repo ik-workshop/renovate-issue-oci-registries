@@ -33,6 +33,17 @@
 - [Useful info](./docs/Notes.md)
 - [Configuration Options](https://docs.renovatebot.com/configuration-options/)
 
+### Renovate similar Issues
+
+- [Issue-19241](https://github.com/renovatebot/renovate/issues/19241)
+
+### Helm Commands
+
+```sh
+$ helm search repo oci://public.ecr.aws/aws-ec2/helm/aws-node-termination-handler --versions
+> not found
+```
+
 ---
 
 <!-- resources -->
