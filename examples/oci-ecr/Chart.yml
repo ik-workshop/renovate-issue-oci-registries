@@ -7,4 +7,4 @@ version: 1.0.0
 dependencies:
   - name: aws-node-termination-handler
     version: 11.14.4
-    repository: oci://public.ecr.aws/aws-ec2/helm/aws-node-termination-handler
+    repository: oci://public.ecr.aws/aws-ec2/helm
