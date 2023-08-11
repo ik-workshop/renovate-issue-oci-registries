@@ -13,6 +13,9 @@ help:
 run: ## Nothing to RUN yet
 	docker run --rm -it \
 		-e RENOVATE_TOKEN \
+		-e RENOVATE_AWS_ECR_TOKEN \
+		-e RENOVATE_AWS_ACCESS_KEY_ID \
+		-e RENOVATE_AWS_SECRET_ACCESS_KEY \
 		-e LOG_LEVEL=$(LOG_LEVEL) \
 		-v $(PWD)/config.js:/usr/src/app/config.js \
 		-v $(PWD)/repos.json:/usr/src/app/repos.json \
