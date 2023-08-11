@@ -1,0 +1,10 @@
+# https://gallery.ecr.aws/aws-ec2/helm/aws-node-termination-handler
+# https://github.com/aws/aws-node-termination-handler/tree/main/config/helm/aws-node-termination-handler#readme
+
+apiVersion: v2
+name: aws-node-termination-handler
+version: 1.0.0
+dependencies:
+  - name: aws-node-termination-handler
+    version: 11.14.4
+    repository: oci://public.ecr.aws/aws-ec2/helm/aws-node-termination-handler
