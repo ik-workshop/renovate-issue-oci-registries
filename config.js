@@ -1,5 +1,6 @@
 const Fs = require('fs');
 
+
 module.exports = {
   "platform": "github",
   "token": process.env.RENOVATE_TOKEN,
@@ -9,13 +10,37 @@ module.exports = {
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
   "pruneStaleBranches": true,
-  "recreateClosed": true,
+  "recreateWhen": "always",
   "onboarding": false,
-  "requireConfig": false,
+  "requireConfig": "optional",
   "baseBranches": ["master", "main"],
+  "hostRules": [
+    {
+      "hostType": "docker",
+      "matchHost": "602401143452.dkr.ecr",
+      "token": process.env.RENOVATE_AWS_ECR_PWD
+    },
+    {
+      "hostType": "docker",
+      "enabled": "true",
+      "matchHost": "602401143452.dkr.ecr",
+      "username": process.env.AWS_ACCESS_KEY_ID,
+      "encrypted": {
+        "password": process.env.AWS_SECRET_ACCESS_KEY
+      }
+    },
+    {
+      "hostType": "docker",
+      "matchHost": "public.ecr.aws",
+      "username": process.env.AWS_ACCESS_KEY_ID,
+      "encrypted": {
+        "password": process.env.AWS_SECRET_ACCESS_KEY
+      }
+    }
+  ],
   "packageRules": [
 
   ],
-  "enabledManagers": ["helmv3"],
+  "enabledManagers": ["helmv3", "helm-values"],
   "regexManagers": []
 }
