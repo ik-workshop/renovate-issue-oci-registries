@@ -56,6 +56,7 @@
 ### Helm Commands
 
 ```sh
+$ skopeo list-tags --no-creds docker://public.ecr.aws/aws-ec2/helm/aws-node-termination-handler
 $ helm search repo oci://public.ecr.aws/aws-ec2/helm/aws-node-termination-handler --versions
 > not found
 $ curl -k https://public.ecr.aws/token/ | jq -r '.token'
